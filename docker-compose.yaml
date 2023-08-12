@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  politician-db:
+    image: mongo:latest
+    container_name: politician-db
+    ports:
+      - "2000:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=poomkun
+      - MONGO_INITDB_ROOT_PASSWORD=Password
+  party-db:
+    image: mongo:latest
+    container_name: party-db
+    ports:
+      - "2001:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=poomkun
+      - MONGO_INITDB_ROOT_PASSWORD=Password 
